@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import {Icon} from 'react-native-elements';
 
 const ArticleScreen = () => {
     return (
@@ -8,5 +9,8 @@ const ArticleScreen = () => {
         </View>
     )
 }
-
+ArticleScreen.navigationOptions = {
+    title: 'Article',
+    tabBarIcon: <Icon type='evilicon' name='chart' size={30}  />
+  }
 export default ArticleScreen;
