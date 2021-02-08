@@ -8,31 +8,32 @@ import { Context as AuthContext } from '../context/AuthContext';
 
 const AccountScreen = () => {
   const { signout,user } = useContext(AuthContext);
+  
   const list = [
     {
       title: 'Account Settings',
       icon: 'user',
-      onpress: ()=>{signout}
+      onpress: ()=>{}
     },
     {
       title: 'Cart',
       icon: 'cart',
-      onpress: ()=>{signout}
+      onpress: ()=>{null}
     },
     {
       title: 'Wishlist',
       icon: 'heart',
-      onpress: ()=>{signout}
+      onpress: ()=>{null}
     },
     {
       title: 'My Orders',
       icon: 'chart',
-      onpress: ()=>{signout}
+      onpress: ()=>{null}
     },
     {
       title: 'Logout',
       icon: 'exclamation',
-      onpress: ()=>{signout}
+      onpress: ()=>{signout()}
     }
 
   ]
@@ -60,7 +61,7 @@ const AccountScreen = () => {
         <View>
           {
             list.map((item, i) => (
-              <ListItem key={i} bottomDivider onPress={()=>item.onpress}>
+              <ListItem key={i} bottomDivider onPress={()=>item.onpress()}>
                 <Icon type="evilicon" name={item.icon} />
                 <ListItem.Content>
                   <ListItem.Title>{item.title}</ListItem.Title>

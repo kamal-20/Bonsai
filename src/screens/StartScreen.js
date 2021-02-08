@@ -1,9 +1,8 @@
 import React from 'react';
 import {StyleSheet,View} from 'react-native';
-import {Text,Image} from 'react-native-elements';
-import { NavigationEvents } from 'react-navigation';
+import {Text,Image,LinearGradient} from 'react-native-elements';
 import RoundButton from '../components/RoundButton';
-
+import tree from '../images/start.png';
 
 const StartScreen = ({navigation}) => {
     StartScreen.navigationOptions = { header: false };
@@ -13,7 +12,7 @@ const StartScreen = ({navigation}) => {
                     <Text h2>Nature.</Text>
                     <Text h2>Bonsai.</Text>
                     <Image
-                        source={{ uri: "https://res.cloudinary.com/dsys26psh/image/upload/v1607882821/bonsai/ishisuki-removebg-preview_b5tvqj.png" }}
+                        source={{ uri: Image.resolveAssetSource(tree).uri }}
                         style={styles.image}
                     />
                     <RoundButton
