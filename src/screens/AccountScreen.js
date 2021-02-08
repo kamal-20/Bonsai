@@ -77,7 +77,7 @@ const AccountScreen = () => {
 
 AccountScreen.navigationOptions = {
   title: 'Account',
-  tabBarIcon: <Icon type='antdesign' name='setting' size={25}  />
+  tabBarIcon: <Icon type='evilicon' name='gear' size={30}  />
 }
 
 const styles = StyleSheet.create({
