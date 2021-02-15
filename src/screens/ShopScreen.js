@@ -1,12 +1,13 @@
 import React from 'react'
+import { SafeAreaView } from 'react-native';
 import { View, Text } from 'react-native'
-import {Icon} from 'react-native-elements';
+import {Card, Icon,Button} from 'react-native-elements';
 
 const ShopScreen = () => {
     return (
-        <View>
-            <Text>ShopScreen</Text>
-        </View>
+        <SafeAreaView>
+            
+        </SafeAreaView>
     )
 }
 
