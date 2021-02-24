@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { View, StyleSheet} from 'react-native';
-import { Button, Accessory,Avatar,Text,Icon,ListItem } from 'react-native-elements';
+import { View, StyleSheet,StatusBar} from 'react-native';
+import { Button, Accessory,Avatar,Text,Icon,ListItem,Header } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 import Spacer from '../components/Spacer';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -39,7 +39,8 @@ const AccountScreen = () => {
   ]
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <StatusBar hidden />
         <LinearGradient
         // Background Linear Gradient
           colors={['#bdc3c7', '#2c3e50']}
@@ -71,20 +72,25 @@ const AccountScreen = () => {
             ))
           }
         </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
-AccountScreen.navigationOptions = {
+AccountScreen.navigationOptions = ()=>{
+  return {
+  headerShown: false,
   title: 'Account',
-  tabBarIcon: <Icon type='evilicon' name='gear' size={30}  />
+  tabBarIcon: <Icon type='evilicon' name='gear' size={30}  />,
+  statusbar: "hidden"
+  };
 }
+
 
 const styles = StyleSheet.create({
     container:{
     },
     avatar:{
-      marginTop: 20,
+      marginTop: 30,
       width:150,
       height:150,
     },
