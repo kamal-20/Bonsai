@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Dimensions } from 'react-native';
-import { View, Text,SafeAreaView,FlatList,StyleSheet } from 'react-native';
-import {Icon, Button,Card,Header,Image} from 'react-native-elements';
+import { View, Text,SafeAreaView,FlatList,StyleSheet} from 'react-native';
+import {Icon, Button,Card,Header,Image,Ca} from 'react-native-elements';
 
 const GalleryScreen = () => {
     const data = [
@@ -29,6 +29,7 @@ const GalleryScreen = () => {
             centerComponent={{ text: 'Gallery', style: { color: '#000', fontSize: 20 } }}
             backgroundColor="white"
             />
+  
             <FlatList
                 style={styles.list}
                 contentContainerStyle={styles.listContainer}
@@ -38,7 +39,16 @@ const GalleryScreen = () => {
                     return item.id;
                 }}
                 renderItem= {({item}) =>{
-                    return <Image style={styles.image} source={{uri:item.image}} />
+                    return <Card>
+                    <Card.Title>HELLO WORLD</Card.Title>
+                    <Card.Divider/>
+                    <Card.Image  style={styles.image} source={{uri:item.image}}>
+                    </Card.Image>
+                    <Text style={{marginBottom: 10}}>
+                        The idea with React Native Elements is more about component structure than actual design.
+                    </Text>
+                      
+                  </Card>
                     
                 }}
             />
@@ -54,7 +64,8 @@ GalleryScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     list: {
-        marginHorizontal: 5,
+        marginHorizontal: 0,
+        paddingHorizontal: 0,
         marginBottom: 60
       },
       listContainer:{
