@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { OpaqueColorValue } from 'react-native';
-import { View,StyleSheet,FlatList } from 'react-native'
+import { View,StyleSheet,FlatList,TouchableOpacity } from 'react-native'
 import {Icon,Header,Text,Image, } from 'react-native-elements';
 
 const ArticleScreen = () => {
@@ -38,9 +38,15 @@ const ArticleScreen = () => {
                     return item.id;
                 }}
                 renderItem= {({item}) =>{
-                    return <Image  style={styles.image} source={{uri:item.image}}>
-                        <Text style={{fontSize:28,color:"white", margin: 10, marginLeft:10, fontFamily: "nato-sans", textAlign:"center"}} >{item.title}</Text>
+                    return <TouchableOpacity
+                    onPress={() => {
+                    console.log("kuchh to hua");
+                    }}
+                    >
+                    <Image  style={styles.image} source={{uri:item.image}}>
+                        <Text style={{fontSize:28,color:"white", margin: 10, marginLeft:10, fontFamily: "sans-serif-condensed", textAlign:"center"}} >{item.title}</Text>
                     </Image>
+                    </TouchableOpacity> 
                 }}
             />
         </View>

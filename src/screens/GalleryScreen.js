@@ -23,7 +23,7 @@ const GalleryScreen = () => {
       ];
       const [images,setImages] = useState(data);
     return (
-        <View >
+        <View style={{backgroundColor:"rgba(50, 50, 50, 0.3)"}}>
             <Header
             placement="center"
             centerComponent={{ text: 'Gallery', style: { color: '#000', fontSize: 20 } }}
