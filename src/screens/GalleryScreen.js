@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Dimensions } from 'react-native';
 import { View, Text,SafeAreaView,FlatList,StyleSheet} from 'react-native';
-import {Icon, Button,Card,Header,Image,Ca} from 'react-native-elements';
+import {Icon,Card,Header,} from 'react-native-elements';
 
 const GalleryScreen = () => {
     const data = [
@@ -71,10 +71,10 @@ const styles = StyleSheet.create({
         marginHorizontal: 0,
         paddingHorizontal: 0,
         marginBottom: 60
-      },
-      listContainer:{
+    },
+    listContainer:{
         alignItems:'center',
-      },
+    },
     image: {
         alignSelf: 'center',
         aspectRatio: 2/3,
