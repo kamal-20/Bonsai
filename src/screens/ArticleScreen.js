@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginHorizontal: 0,
         paddingHorizontal: 0,
-        marginBottom: 60
+        marginBottom: 70
     },
     listContainer:{
         alignItems:'center',
