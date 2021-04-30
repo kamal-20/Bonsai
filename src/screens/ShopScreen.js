@@ -81,6 +81,7 @@ ShopScreen.navigationOptions = {
         marginVertical: 10,
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         borderRadius: 5,
+        
     },
     shapetext:{
         marginHorizontal: 20,
