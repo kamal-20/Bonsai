@@ -26,7 +26,7 @@ const ArticleScreen = () => {
         <View>
             <Header
             placement="center"
-            centerComponent={{ image: 'Articles', style: { color: '#000', fontSize: 20 } }}
+            centerComponent={{ text: 'Articles', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
             backgroundColor="white"
             />
             <FlatList
@@ -60,6 +60,7 @@ ArticleScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     list: {
+        marginTop: 10,
         marginHorizontal: 0,
         paddingHorizontal: 0,
         marginBottom: 60
