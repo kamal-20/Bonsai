@@ -6,7 +6,7 @@ import {Icon,Header,Image,Text,} from 'react-native-elements';
 const ShopScreen = () => {
 
     const data = [
-        {id:1, likes:12, image:"https://bit.ly/3aTojLv", shape: "hokidachi" },
+        {id:1, likes:12, image:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hokidachi.jpg/1200px-Hokidachi.jpg", shape: "hokidachi" },
         {id:2, likes:11, image:"https://i.pinimg.com/originals/8b/82/32/8b8232413a092c92d0ae6907016928c4.jpg", shape: "chokkan" },
         {id:3, likes:25, image:"https://images.unsplash.com/photo-1613143323550-7a9044756070?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80", shape: "moyogi"}, 
         {id:4, likes:12, image:"https://548038.smushcdn.com/934934/wp-content/uploads/2018/06/Slanting-bonsai-style-shakan-1024x1024.jpg?lossy=1&strip=0&webp=1", shape: "Shakan" }, 
