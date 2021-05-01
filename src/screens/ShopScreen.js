@@ -1,3 +1,4 @@
+import { Left } from 'native-base';
 import React,{useState} from 'react'
 import { StyleSheet,Dimensions, ActivityIndicator } from 'react-native';
 import { View, FlatList,TouchableOpacity } from 'react-native'
@@ -32,6 +33,12 @@ const ShopScreen = () => {
                 centerComponent={{ text: 'Auctions', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
                 backgroundColor="white"
             />
+            <Text style={styles.sectionheading}>
+                Trending
+            </Text>
+            <Text style={styles.sectionheading}>
+                Shapes
+            </Text>
             <FlatList
                style={styles.list}
                contentContainerStyle={styles.listContainer}
@@ -88,7 +95,7 @@ ShopScreen.navigationOptions = {
         
     },
     shapetext:{
-        marginHorizontal: 20,
+        marginHorizontal: 30,
         fontFamily: 'sans-serif-condensed',
         textTransform: "uppercase",
         borderRadius: 25,
@@ -96,6 +103,24 @@ ShopScreen.navigationOptions = {
         marginBottom: 30,
         textAlign: "center",
 
+    },
+    sectionheading:{
+        fontFamily: 'sans-serif-condensed',
+        color: 'white',
+        textTransform: 'capitalize',
+        textAlign: 'left',
+        alignSelf: 'flex-start',
+        marginHorizontal: '5%',
+        marginTop: 10,
+        fontSize: 18,
+        backgroundColor: 'rgba(25, 25, 25, 0.5)',
+        paddingHorizontal: 20,
+        borderTopRightRadius: 50,
+        borderBottomLeftRadius: 50,
+        borderColor: '#333',
+        // borderBottomWidth: 3,
+        // borderRightWidth: 3,
+        // borderLeftWidth: 1,
     }
 });
 

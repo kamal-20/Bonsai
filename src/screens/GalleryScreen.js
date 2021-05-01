@@ -43,9 +43,9 @@ const GalleryScreen = () => {
                     <Card.Title style={{align: "left"}}>Bonsai</Card.Title>
                     <Card.Image  style={styles.image} source={{uri:item.image}}>
                     </Card.Image>
-                    <View style={{flexDirection: "row",display:"flex" , paddingVertical:5,alignContent:"space-between"} }>
-                    <Text style={{flex: 3,alignSelf:"center"}}>Junyper</Text>
-                    <Text style={{flex: 1,alignSelf: "flex-end"}}>$1200000</Text>
+                    <View style={{flexDirection: "row",display:"flex" , paddingVertical:5,justifyContent:"space-between"} }>
+                    <Text >Junyper</Text>
+                    <Text >$1200000</Text>
                     </View>
                     <Card.Divider />
                     <Text style={{marginBottom: 10}}>
