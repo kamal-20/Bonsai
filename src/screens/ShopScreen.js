@@ -52,7 +52,7 @@ const ShopScreen = () => {
                    source={{uri:item.image}}
                    PlaceholderContent= {<ActivityIndicator />} 
                    />
-                   <Text style={styles.shapetext}> Style</Text>
+                   <Text style={styles.shapetext}> {item.shape}</Text>
                    </TouchableOpacity>
                    ) 
                }}
