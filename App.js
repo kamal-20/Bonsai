@@ -11,11 +11,17 @@ import ShopScreen from './src/screens/ShopScreen';
 import GalleryScreen from './src/screens/GalleryScreen';
 import ArticleScreen from './src/screens/ArticleScreen';
 import authScreen from './src/screens/authScreen';
+import UpcomingAuctionScreen from './src/screens/UpcomingAuctionScreen';
+import OngoingAuctionScreen from './src/screens/OngoingAuctionScreen';
+import AuctionDetailScreen from './src/screens/AuctionDetailScreen';
+import ArticleDetailScreen from './src/screens/ArticleDetailScreen';
+
 //provider
 import { Provider as AuthProvider } from './src/context/AuthContext';
-//rootnav
+//rootnav)},
 import { setNavigator } from './src/navigatorRef';
 //firebase
+
 
 
 
@@ -27,8 +33,16 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen,
   }),
   mainFlow: createBottomTabNavigator({
-    Shop: ShopScreen,
-    Article: ArticleScreen,
+    Shop: createStackNavigator({
+      Category: ShopScreen,
+      UpcomingAuction: UpcomingAuctionScreen,
+      OngoingAuction: OngoingAuctionScreen,
+      AuctionDetail : AuctionDetailScreen,
+    }),
+    Article: createStackNavigator({
+      ArticleList : ArticleScreen,
+      ArticleDetail: ArticleDetailScreen
+    }),
     Gallery: GalleryScreen,
     Account: AccountScreen,
   }),
