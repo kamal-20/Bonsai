@@ -4,7 +4,7 @@ import { View, FlatList,TouchableOpacity,ScrollView, } from 'react-native'
 import {Icon,Header,Image,Text,Tab } from 'react-native-elements';
 
 
-const ShopScreen = () => {
+const ShopScreen = (props) => {
     const data1 = [
         {id:1, likes:12, image:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hokidachi.jpg/1200px-Hokidachi.jpg", shape: "hokidachi" },
         {id:2, likes:11, image:"https://i.pinimg.com/originals/8b/82/32/8b8232413a092c92d0ae6907016928c4.jpg", shape: "chokkan" },
@@ -44,7 +44,7 @@ const ShopScreen = () => {
                renderItem= {({item}) =>{
                    return (<TouchableOpacity
                    onPress={() => {
-                   console.log("kuchh to hua");
+                        props.navigation.push('UpcomingAuction')
                    }}
                    >
                    <Image  
