@@ -20,7 +20,7 @@ import ArticleDetailScreen from './src/screens/ArticleDetailScreen';
 import { Provider as AuthProvider } from './src/context/AuthContext';
 //rootnav)},
 import { setNavigator } from './src/navigatorRef';
-//firebase
+
 
 
 
