@@ -44,7 +44,7 @@ const ShopScreen = (props) => {
                renderItem= {({item}) =>{
                    return (<TouchableOpacity
                    onPress={() => {
-                        props.navigation.push('UpcomingAuction')
+                        props.navigation.push('Auction')
                    }}
                    >
                    <Image  
@@ -62,10 +62,6 @@ const ShopScreen = (props) => {
     )
 }
 
-ShopScreen.navigationOptions = {
-    title: 'Auctions',
-    tabBarIcon: <Icon type='evilicon' name='archive' size={30}  />
-  }
 
   const styles = StyleSheet.create({
     list: {

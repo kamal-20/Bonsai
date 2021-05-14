@@ -18,4 +18,5 @@ const AuctionDetailScreen = () => {
     
 });
 
+
 export default AuctionDetailScreen;

@@ -58,10 +58,6 @@ const ArticleScreen = () => {
     )
 }
 
-ArticleScreen.navigationOptions = {
-    title: 'Article',
-    tabBarIcon: <Icon type='evilicon' name='chart' size={30}  />
-  }
 
 const styles = StyleSheet.create({
     list: {

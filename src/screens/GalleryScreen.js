@@ -61,10 +61,6 @@ const GalleryScreen = () => {
     )
 }
 
-GalleryScreen.navigationOptions = {
-    title: 'Gallery',
-    tabBarIcon: <Icon type='evilicon' name='image' size={30}  />
-}
 
 const styles = StyleSheet.create({
     list: {

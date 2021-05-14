@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import {Icon} from 'react-native-elements';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createBottomTabNavigator, createMaterialTopTabNavigator} from 'react-navigation-tabs';
 //screens
 import StartScreen from './src/screens/StartScreen';
 import SignupScreen from './src/screens/SignupScreen';
@@ -21,7 +22,10 @@ import { Provider as AuthProvider } from './src/context/AuthContext';
 //rootnav)},
 import { setNavigator } from './src/navigatorRef';
 
-
+const auctionTabs = createMaterialTopTabNavigator({
+    UpcomingAuction: UpcomingAuctionScreen,
+    OngoingAuction: OngoingAuctionScreen 
+})
 
 
 
@@ -33,18 +37,41 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen,
   }),
   mainFlow: createBottomTabNavigator({
-    Shop: createStackNavigator({
-      Category: ShopScreen,
-      UpcomingAuction: UpcomingAuctionScreen,
-      OngoingAuction: OngoingAuctionScreen,
-      AuctionDetail : AuctionDetailScreen,
-    }),
-    Article: createStackNavigator({
-      ArticleList : ArticleScreen,
-      ArticleDetail: ArticleDetailScreen
-    }),
-    Gallery: GalleryScreen,
-    Account: AccountScreen,
+    Shop: {
+      screen:createStackNavigator({
+        Category: ShopScreen,
+        Auction: auctionTabs,
+        AuctionDetail : AuctionDetailScreen,
+      }),
+      navigationOptions: {
+        title: 'Auctions',
+        tabBarIcon: <Icon type='evilicon' name='archive' size={30}  />
+      }
+    },
+    Article: {
+      screen:createStackNavigator({
+          ArticleList : ArticleScreen,
+          ArticleDetail: ArticleDetailScreen
+      }),
+      navigationOptions: {
+        title: 'Articles',
+        tabBarIcon: <Icon type='evilicon' name='chart' size={30}  />
+      } 
+    },
+    Gallery:{
+      screen:GalleryScreen,
+      navigationOptions: {
+        title: 'Gallery',
+        tabBarIcon: <Icon type='evilicon' name='image' size={30}  />
+      }
+    },
+    Account: {
+      screen:AccountScreen,
+      navigationOptions: {
+        title: 'Account',
+        tabBarIcon: <Icon type='evilicon' name='user' size={30}  />
+    }
+    },
   }),
 });
 
