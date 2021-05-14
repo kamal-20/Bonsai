@@ -40,7 +40,6 @@ const AccountScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar hidden />
         <LinearGradient
         // Background Linear Gradient
           colors={['#bdc3c7', '#2c3e50']}

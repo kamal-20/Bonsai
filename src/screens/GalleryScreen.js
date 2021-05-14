@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Dimensions } from 'react-native';
-import { View, Text,SafeAreaView,FlatList,StyleSheet} from 'react-native';
-import {Icon,Card,Header,} from 'react-native-elements';
+import { View, Text,SafeAreaView,FlatList,StyleSheet,StatusBar} from 'react-native';
+import {Card,Header} from 'react-native-elements';
 
 const GalleryScreen = () => {
     const data = [
@@ -24,12 +24,16 @@ const GalleryScreen = () => {
       const [images,setImages] = useState(data);
     return (
         <View style={{backgroundColor:"rgba(50, 50, 50, 0.3)"}}>
-            <Header
-            placement="center"
-            centerComponent={{ text: 'Gallery', style: { color: '#000', fontSize: 20 } }}
-            backgroundColor="white"
+            <StatusBar
+                backgroundColor="rgba(50, 50, 50, 0.3)"
+                barStyle="dark-content"
+                showHideTransition="fade"
             />
-  
+            <Header
+                placement="center"
+                centerComponent={{ text: 'Gallery', style: { color: '#000', fontSize: 20 } }}
+                backgroundColor="white"
+            />
             <FlatList
                 style={styles.list}
                 contentContainerStyle={styles.listContainer}
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     list: {
         marginHorizontal: 0,
         paddingHorizontal: 0,
-        marginBottom: 60
+        marginBottom: 10
     },
     listContainer:{
         alignItems:'center',

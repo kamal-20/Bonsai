@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { ActivityIndicator } from 'react-native';
 import { OpaqueColorValue } from 'react-native';
 import { View,StyleSheet,FlatList,TouchableOpacity } from 'react-native'
-import {Icon,Header,Text,Image, } from 'react-native-elements';
+import {Icon,Header,Text,Image,StatusBar } from 'react-native-elements';
 
 const ArticleScreen = () => {
     const data = [
@@ -25,11 +25,7 @@ const ArticleScreen = () => {
       const [articles,setArticles] = useState(data);
     return (
         <View>
-            <Header
-            placement="center"
-            centerComponent={{ text: 'Articles', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
-            backgroundColor="white"
-            />
+            
             <FlatList
                 style={styles.list}
                 contentContainerStyle={styles.listContainer}
@@ -64,7 +60,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginHorizontal: 0,
         paddingHorizontal: 0,
-        marginBottom: 70
+        marginBottom: 10
     },
     listContainer:{
         alignItems:'center',

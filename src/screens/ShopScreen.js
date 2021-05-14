@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { StyleSheet,Dimensions, ActivityIndicator } from 'react-native';
-import { View, FlatList,TouchableOpacity,ScrollView, } from 'react-native'
+import { View, FlatList,TouchableOpacity,SafeAreaView } from 'react-native'
 import {Icon,Header,Image,Text,Tab } from 'react-native-elements';
 
 
@@ -26,12 +26,7 @@ const ShopScreen = (props) => {
     const [images,setImages] = useState(data1);
 
     return (
-        <View>
-            <Header
-                placement="center"
-                centerComponent={{ text: 'Auctions', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
-                backgroundColor="white"
-            />
+        <SafeAreaView>
             <FlatList
                style={styles.list}
                contentContainerStyle={styles.listContainer}
@@ -58,7 +53,7 @@ const ShopScreen = (props) => {
                }}
             />
 
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -68,7 +63,7 @@ const ShopScreen = (props) => {
         marginTop: 10,
         marginHorizontal: 0,
         paddingHorizontal: 0,
-        marginBottom: 70
+        marginBottom: 10
     },
     listContainer:{
         alignItems:'center',

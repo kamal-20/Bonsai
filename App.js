@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Icon} from 'react-native-elements';
+import {Icon,Header} from 'react-native-elements';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator, createMaterialTopTabNavigator} from 'react-navigation-tabs';
@@ -39,7 +39,16 @@ const switchNavigator = createSwitchNavigator({
   mainFlow: createBottomTabNavigator({
     Shop: {
       screen:createStackNavigator({
-        Category: ShopScreen,
+        Category: {
+          screen:ShopScreen,
+          navigationOptions:{
+            header:() => <Header
+            placement="center"
+            centerComponent={{ text: 'Categories', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+            backgroundColor="white"
+          />
+          }
+        },
         Auction: auctionTabs,
         AuctionDetail : AuctionDetailScreen,
       }),
@@ -50,19 +59,29 @@ const switchNavigator = createSwitchNavigator({
     },
     Article: {
       screen:createStackNavigator({
-          ArticleList : ArticleScreen,
+          ArticleList : {
+            screen:ArticleScreen,
+            navigationOptions:{
+              header:() => <Header
+              placement="center"
+              centerComponent={{ text: 'Articles', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+              backgroundColor="white"
+            />
+            }
+          },
           ArticleDetail: ArticleDetailScreen
       }),
       navigationOptions: {
         title: 'Articles',
         tabBarIcon: <Icon type='evilicon' name='chart' size={30}  />
-      } 
+      }
     },
     Gallery:{
       screen:GalleryScreen,
       navigationOptions: {
         title: 'Gallery',
-        tabBarIcon: <Icon type='evilicon' name='image' size={30}  />
+        tabBarIcon: <Icon type='evilicon' name='image' size={30}  />,
+        
       }
     },
     Account: {
