@@ -20,12 +20,12 @@ import ArticleDetailScreen from './src/screens/ArticleDetailScreen';
 //provider
 import { Provider as AuthProvider } from './src/context/AuthContext';
 //rootnav)},
-import { setNavigator } from './src/navigatorRef';
+import { navigate, setNavigator } from './src/navigatorRef';
 
 const auctionTabs = createMaterialTopTabNavigator({
     UpcomingAuction: UpcomingAuctionScreen,
     OngoingAuction: OngoingAuctionScreen 
-})
+  });
 
 
 
@@ -49,7 +49,16 @@ const switchNavigator = createSwitchNavigator({
           />
           }
         },
-        Auction: auctionTabs,
+        Auction: {
+          screen:auctionTabs,
+          navigationOptions:{
+          header:() => <Header
+                      placement="center"
+                      centerComponent={{ text: "Auctions", style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+                      backgroundColor="white"
+                    />
+          }
+        },
         AuctionDetail : AuctionDetailScreen,
       }),
       navigationOptions: {
