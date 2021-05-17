@@ -4,7 +4,7 @@ import { OpaqueColorValue } from 'react-native';
 import { View,StyleSheet,FlatList,TouchableOpacity } from 'react-native'
 import {Icon,Header,Text,Image,StatusBar } from 'react-native-elements';
 
-const ArticleScreen = () => {
+const ArticleScreen = (props) => {
     const data = [
         {id:1, likes:12, image:"https://images.unsplash.com/photo-1539176170444-67d6c8f356d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80", title:"How to prune"},
         {id:2, likes:11, image:"https://images.unsplash.com/photo-1467043198406-dc953a3defa0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80", title:"How to change soil"},
@@ -37,8 +37,8 @@ const ArticleScreen = () => {
                 renderItem= {({item}) =>{
                     return <TouchableOpacity
                     onPress={() => {
-                    console.log("kuchh to hua");
-                    }}
+                        props.navigation.push('ArticleDetail');
+                   }}
                     >
                     <Image  
                         style={styles.image} 

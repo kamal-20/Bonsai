@@ -8,11 +8,6 @@ const ArticleDetailScreen = () => {
 
     return (
         <View>
-            <Header
-                placement="center"
-                centerComponent={{ text: 'Bonsai', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
-                backgroundColor="white"
-            />
             <Text>ArticleDetailScreen</Text>
 
         </View>

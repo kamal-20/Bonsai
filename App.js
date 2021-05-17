@@ -22,6 +22,7 @@ import { Provider as AuthProvider } from './src/context/AuthContext';
 //rootnav)},
 import { navigate, setNavigator } from './src/navigatorRef';
 import { greaterThan } from 'react-native-reanimated';
+import { setStatusBarNetworkActivityIndicatorVisible } from 'expo-status-bar';
 
 const auctionTabs = createMaterialTopTabNavigator({
     UpcomingAuction: UpcomingAuctionScreen,                                    
@@ -94,7 +95,16 @@ const switchNavigator = createSwitchNavigator({
             />
             }
           },
-          ArticleDetail: ArticleDetailScreen
+          ArticleDetail: {
+            screen:ArticleDetailScreen,
+            navigationOptions:{
+              header:() => <Header
+              placement="center"
+              centerComponent={{ text: 'Article', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+              backgroundColor="white"
+            />
+            }
+          }
       }),
       navigationOptions: {
         title: 'Articles',
@@ -118,6 +128,7 @@ const switchNavigator = createSwitchNavigator({
     },
   }),
 });
+
 
 const App = createAppContainer(switchNavigator);
 

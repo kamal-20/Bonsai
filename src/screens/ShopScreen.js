@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { StyleSheet,Dimensions, ActivityIndicator } from 'react-native';
-import { View, FlatList,TouchableOpacity,SafeAreaView } from 'react-native'
+import { View, FlatList,TouchableOpacity,SafeAreaView,StatusBar } from 'react-native'
 import {Icon,Header,Image,Text,Tab } from 'react-native-elements';
 
 
@@ -27,6 +27,11 @@ const ShopScreen = (props) => {
 
     return (
         <SafeAreaView>
+            <StatusBar
+                backgroundColor="rgba(50, 50, 50, 0.3)"
+                barStyle="dark-content"
+                showHideTransition="fade"
+            />
             <FlatList
                style={styles.list}
                contentContainerStyle={styles.listContainer}
