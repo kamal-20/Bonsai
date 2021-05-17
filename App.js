@@ -21,10 +21,25 @@ import ArticleDetailScreen from './src/screens/ArticleDetailScreen';
 import { Provider as AuthProvider } from './src/context/AuthContext';
 //rootnav)},
 import { navigate, setNavigator } from './src/navigatorRef';
+import { greaterThan } from 'react-native-reanimated';
 
 const auctionTabs = createMaterialTopTabNavigator({
-    UpcomingAuction: UpcomingAuctionScreen,
+    UpcomingAuction: UpcomingAuctionScreen,                                    
     OngoingAuction: OngoingAuctionScreen 
+  },{
+      tabBarOptions:{
+        activeTintColor:'green',
+        inactiveTintColor: 'black',
+        style: {
+          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          elevation: 0, // remove shadow on Android
+          shadowOpacity: 0, // remove shadow on iOS,
+        },
+        indicatorStyle:{
+          color: 'green',
+          backgroundColor: 'green'
+        }
+      }
   });
 
 
@@ -52,12 +67,13 @@ const switchNavigator = createSwitchNavigator({
         Auction: {
           screen:auctionTabs,
           navigationOptions:{
-          header:() => <Header
-                      placement="center"
-                      centerComponent={{ text: "Auctions", style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
-                      backgroundColor="white"
-                    />
+            header:() => <Header
+                          placement="center"
+                          centerComponent={{ text: "Auctions", style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+                          backgroundColor="white"
+                        />,
           }
+                   
         },
         AuctionDetail : AuctionDetailScreen,
       }),
