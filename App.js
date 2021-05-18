@@ -100,7 +100,7 @@ const switchNavigator = createSwitchNavigator({
             navigationOptions:{
               header:() => <Header
               placement="center"
-              centerComponent={{ text: 'Article', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
+              centerComponent={{ text: 'Article ', style: { color: '#000', fontSize: 20, fontFamily: "sans-serif-condensed"} }}
               backgroundColor="white"
             />
             }

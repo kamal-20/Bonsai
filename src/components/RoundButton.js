@@ -16,7 +16,7 @@ const RoundButton = ({title,color,navigation,path,onPress}) => {
                 backgroundColor: `${color}`,
                 marginLeft: 30,
                 marginRight: 30,
-                margin: 10,
+                margin: 5,
                 height: 50,
                 width: 300
             }}
