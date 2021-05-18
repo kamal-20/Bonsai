@@ -187,7 +187,7 @@ Praesent interdum eget libero vel feugiat. Ut venenatis ultrices nibh, nec portt
                 renderItem= {({item}) =>{
                     return <TouchableOpacity
                     onPress={() => {
-                        props.navigation.push('ArticleDetail',{article:{item}});
+                        props.navigation.push('ArticleDetail',{article:item});
                    }}
                     >
                     <Image  

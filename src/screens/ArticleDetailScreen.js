@@ -5,24 +5,23 @@ import {Image,Text} from 'react-native-elements';
 
 
 const ArticleDetailScreen = (props) => {
-
+    const [article,setArticle] = useState({});
     useEffect(() => {
-        console.log(props.navigation.state.params);
+        setArticle(props.navigation.state.params.article);
       return () => {
-        console.log(props.navigation.state.params);
+        setArticle(props.navigation.state.params.article);
       };
-    });
+    },[props.navigation.state.params.article]);
     return (
-        <SafeAreaView>
-            {/* <Image  
+        <ScrollView>
+            <Image  
                 style={styles.image} 
                 source={{uri:article.image}}
                 PlaceholderContent= {<ActivityIndicator />}
             />
-            <Text>{article.writer}</Text>
-            <Text>{article.date}</Text>
-            <Text>{article.text}</Text> */}
-        </SafeAreaView>
+            <Text style={styles.writer}>{` - ${article.writer}`}</Text>
+            <Text style={styles.para}>{article.text}</Text>
+        </ScrollView>
     )
 }
 
@@ -31,12 +30,24 @@ const styles = StyleSheet.create({
         marginHorizontal: 0,
         alignItems: "center",
         justifyContent: "center",
-        aspectRatio: 2.2,
+        aspectRatio: 1.5 ,
         width: '100%',
-        height: 150 ,
+        height: undefined ,
         marginVertical: 10,
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        borderRadius: 15,
+    },
+    para:{
+        marginHorizontal: 15,
+        letterSpacing: 0.6,
+        lineHeight: 20,
+        fontFamily: 'sans-serif',
+        textAlign:"left",
+    },
+    writer:{
+        fontSize: 20,
+        color: 'green',
+        marginLeft: 20,
+        marginTop:20
+
     }
 });
 
