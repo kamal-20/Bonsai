@@ -23,8 +23,8 @@ you will get expo server running.. You can have a look at app by using expo app 
 | View Articles | &#10004; | Read Articles on Bonsai care|
 | View Gallery | &#10004; | View gallery of Famous Bonsai Art|
 | Account information | &#10004; | MAnage your account Information |
-| View Wallet | &#10004; | View, Add, Withdraw money from aution wallet |
-| Automatic mode | &#10004; | System places highest bit when someone places higher bid than you |
+| View Wallet | | View, Add, Withdraw money from aution wallet |
+| Automatic mode | | System places highest bit when someone places higher bid than you |
 
 <b>Purchase Features</b>
 
