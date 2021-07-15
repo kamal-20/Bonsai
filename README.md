@@ -3,7 +3,7 @@
 ###A React Native app for auction of Bonsai Trees with firebase as backend
 
 ## Preview
-<img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157061/WhatsApp_Image_2021-05-16_at_14.48.49_emdj6d.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157793/WhatsApp_Image_2021-05-16_at_14.48.50_sacfsd.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157793/WhatsApp_Image_2021-05-16_at_14.48.50_1_q3jakl.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157792/WhatsApp_Image_2021-05-16_at_14.48.51_ayv8wz.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157792/WhatsApp_Image_2021-05-16_at_14.48.52_xucmsf.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157792/WhatsApp_Image_2021-05-16_at_14.51.09_feywap.jpg" alt="home" width="300" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1621157792/WhatsApp_Image_2021-05-16_at_14.48.52_1_xhvruj.jpg" alt="home" width="300" />
+<img src="https://res.cloudinary.com/dsys26psh/image/upload/v1626344504/Desktop_-_1_2_gpvugo.jpg" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1626344008/Desktop_-_1_knppwj.jpg" />     <img src="https://res.cloudinary.com/dsys26psh/image/upload/v1626344505/Desktop_-_1_3_wwl9py.jpg"  /> 
 
 
 ## Features 
